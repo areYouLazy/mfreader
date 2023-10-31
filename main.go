@@ -1,5 +1,10 @@
+/*
+Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+*/
 package main
 
-func init() {}
+import "github.com/areYouLazy/mfreader/cmd"
 
-func main() {}
+func main() {
+	cmd.Execute()
+}

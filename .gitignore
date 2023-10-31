@@ -121,3 +121,6 @@ $RECYCLE.BIN/
 
 # example file
 dump.mfd
+
+# binary file
+mfreader
