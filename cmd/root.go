@@ -14,8 +14,9 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "mfreader",
-	Short: "Print MIFARE dumps in human readable format",
+	Version: "0.0.1",
+	Use:     "mfreader",
+	Short:   "Print MIFARE dumps in human readable format",
 	Long: `mfreader, a tool inspired by mfdread ( https://github.com/zhovner/mfdread )
 to analyze and print mifare dumps in human readable format`,
 	Run: func(cmd *cobra.Command, args []string) {
