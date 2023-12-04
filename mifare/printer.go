@@ -32,11 +32,11 @@ func prettyPrintMIFAREInfos(mifare *MIFARE) {
 	tw.Style().Title.Align = text.AlignCenter
 
 	// setup table headers
-	mainHeaderRow := table.Row{"Sector", "Block", "Data", "Access Bits"}
-	emptyHeaderRow := table.Row{"", "", "", ""}
+	mainHeaderRow := table.Row{"Sector", "Block", "Data", "Access Bits", "Rights"}
+	emptyHeaderRow := table.Row{"", "", "", "", ""}
 
 	dataLable := fmt.Sprintf("%sKey A%s %sAccess Bits%s %sKey B%s", Red, Reset, Green, Reset, Blue, Reset)
-	subtitleHeaderRow := table.Row{"", "", dataLable, ""}
+	subtitleHeaderRow := table.Row{"", "", dataLable, "", ""}
 
 	// append headers to table writer
 	tw.AppendHeader(mainHeaderRow)
@@ -63,6 +63,11 @@ func prettyPrintMIFAREInfos(mifare *MIFARE) {
 		{
 			Name:        "Access Bits",
 			Align:       text.AlignCenter,
+			AlignHeader: text.AlignCenter,
+		},
+		{
+			Name:        "Rights",
+			Align:       text.AlignLeft,
 			AlignHeader: text.AlignCenter,
 		},
 	})
@@ -108,6 +113,7 @@ func prettyPrintMIFAREInfos(mifare *MIFARE) {
 				block.Number,
 				dataString,
 				rights,
+				block.RightsAsHumanString(),
 			})
 		}
 

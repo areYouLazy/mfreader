@@ -44,6 +44,15 @@ func (b Block) RightsAsString() string {
 	return s
 }
 
+func (b Block) RightsAsHumanString() string {
+	// get permissions for humans
+	if b.IsTrailerSector {
+		return AccessBitsToSectorPermissions[b.RightsAsString()]
+	} else {
+		return AccessBitsToDataPermissions[b.RightsAsString()]
+	}
+}
+
 func (b Block) DataAsHexString() string {
 	return hex.EncodeToString(b.Data)
 }
