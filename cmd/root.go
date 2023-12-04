@@ -14,7 +14,7 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Version: "0.0.1",
+	Version: "0.1.0",
 	Use:     "mfreader",
 	Short:   "Print MIFARE dumps in human readable format",
 	Long: `mfreader, a tool inspired by mfdread ( https://github.com/zhovner/mfdread )
