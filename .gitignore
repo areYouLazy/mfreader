@@ -122,5 +122,10 @@ $RECYCLE.BIN/
 # example file
 dump.mfd
 
-# binary file
+# binary files
 mfreader
+mfreader.exe
+
+# binary folders
+bin/
+bin/*
