@@ -129,3 +129,6 @@ mfreader.exe
 # binary folders
 bin/
 bin/*
+
+# build script
+build.sh
